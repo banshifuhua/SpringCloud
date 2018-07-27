@@ -1,8 +1,8 @@
 spring:
   application:
-    name: eamon-eureka
+    name: eamon-eureka-slaveone
   profiles:
-    active: master
+    active: slaveone
 eureka:
   instance:
     # 设置当前实例的主机名称
