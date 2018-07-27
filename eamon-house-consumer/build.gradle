@@ -30,6 +30,7 @@ ext {
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
     compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('com.netflix.ribbon:ribbon:2.2.2')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
