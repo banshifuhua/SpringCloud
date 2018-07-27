@@ -18,7 +18,8 @@ eureka:
   server:
     # 关闭自我保护
     enable-self-preservation: false
-    eviction-interval-timer-in-ms: 6000
+    # 默认6000毫秒
+    eviction-interval-timer-in-ms: 5000
 security:
   basic:
     enabled: true
