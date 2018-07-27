@@ -7,3 +7,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/, http://eamon:eamon@127.0.0.1:8762/eureka/
+  instance:
+      #改变服务注册的 instance ID形式为 服务名：主机名：端口
+      instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instalce_id:${server.port}}
+      # 点击实力id时进行ip跳转
+      preferIpAddress: true
