@@ -14,7 +14,7 @@ public class SubtitutionController {
 
     @GetMapping("/callHello")
     public String callHello(){
-        return restTemplate.getForObject("http://localhost:8081/house/hello", String.class);
+        return restTemplate.getForObject("http://house-service/house/hello", String.class);
     }
 
 }
