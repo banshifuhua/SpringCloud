@@ -3,4 +3,5 @@ server:
 eureka:
   client:
     serviceUrl:
+      # 注册到从机
       defaultZone: http://eamon:eamon@slaveone:8762/eureka/

@@ -3,4 +3,5 @@ server:
 eureka:
   client:
     serviceUrl:
+      # 注册到主机  相互注册
       defaultZone: http://eamon:eamon@master:8761/eureka/
