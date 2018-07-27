@@ -3,4 +3,4 @@ server:
 eureka:
   client:
     service-url:
-     default-zone: http://eamon:eamon@slaveone:8762/eureka/
+      default-zone: http://eamon:eamon@slaveone:8762/eureka/

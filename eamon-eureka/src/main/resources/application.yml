@@ -7,6 +7,8 @@ eureka:
   instance:
     # 设置当前实例的主机名称
     hostname: localhost
+    # 点击注册中心的服务地址跳转到对应服务的api文档
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
   client:
     # 由于该应用为注册中心，所以设置为false，代表不向注册中心注册自己
     register-with-eureka: false
