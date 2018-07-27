@@ -2,5 +2,5 @@ server:
   port: 8761
 eureka:
   client:
-    service-url:
-      default-zone: http://eamon:eamon@slaveone:8762/eureka/
+    serviceUrl:
+      defaultZone: http://eamon:eamon@slaveone:8762/eureka/

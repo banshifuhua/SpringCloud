@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: house-consumer
+server:
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/, http://eamon:eamon@127.0.0.1:8762/eureka/

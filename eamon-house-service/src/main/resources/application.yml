@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: house-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/, http://eamon:eamon@127.0.0.1:8762/eureka/

@@ -1,4 +1,4 @@
-package com.eamon.eamonhouseservice;
+package com.eamon.eamonhouseconsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class EamonHouseServiceApplication {
+public class EamonHouseConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EamonHouseServiceApplication.class, args);
+        SpringApplication.run(EamonHouseConsumerApplication.class, args);
     }
+
 }
