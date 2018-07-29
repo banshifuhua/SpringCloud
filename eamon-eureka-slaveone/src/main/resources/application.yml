@@ -6,7 +6,7 @@ spring:
 eureka:
   instance:
     # 设置当前实例的主机名称
-    hostname: 192.168.11.214
+    hostname: localhost
     # 点击注册中心的服务地址跳转到对应服务的api文档
     status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instalce_id:${server.port}}

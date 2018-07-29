@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eamon:eamon@192.168.11.214:8761/eureka/, http://eamon:eamon@192.168.11.214:8762/eureka/
+      defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/, http://eamon:eamon@127.0.0.1:8762/eureka/
     # 开启健康检查 需要引入actuator依赖
     helthcheck:
       enabled: true
