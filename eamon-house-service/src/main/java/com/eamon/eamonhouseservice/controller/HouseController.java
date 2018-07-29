@@ -12,4 +12,5 @@ public class HouseController {
     public String hello() {
         return "Hello";
     }
+
 }
