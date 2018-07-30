@@ -31,7 +31,11 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
 
     compile('org.springframework.boot:spring-boot-starter-actuator')
-    compile('org.springframework.boot:spring-boot-starter-jpa')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+
+    compile ('com.alibaba:druid-spring-boot-starter:1.1.2')
+    compile ('mysql:mysql-connector-java')
+
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
