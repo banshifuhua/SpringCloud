@@ -43,13 +43,23 @@ subprojects {
     ext {
         springBootVersion = '1.5.4.RELEASE'
     }
+//    configurations {
+//        compile.exclude module: 'spring-boot-starter-logging'
+//        compile.exclude module: 'spring-boot-starter-logback'
+//        compile.exclude module: 'slf4j-api'
+//        compile.exclude module: 'jboss-logging'
+//        compile.exclude module: 'jcl-over-slf4j'
+//        compile.exclude module: 'logback-classic'
+//    }
 
     dependencies {
 
         compile("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//        compile('org.springframework.boot:spring-boot-starter-log4j2')
 
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
 }
+
 
 
