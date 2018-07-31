@@ -1,6 +1,6 @@
 package com.eamon.eamonhouseconsumer.controller;
 
-import com.eamon.eamonhouseservice.po.HouseInfo;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -19,8 +19,8 @@ public class SubtitutionController {
     }
 
     @GetMapping("/data")
-    public HouseInfo getData(@RequestParam("name") String name) {
-        return restTemplate.getForObject("http://house-service/house/data?name=" + name, HouseInfo.class);
+    public JSONObject getData(@RequestParam("name") String name) {
+        return restTemplate.getForObject("http://house-service/house/data?name=" + name, JSONObject.class);
     }
 
     @GetMapping("/data/{name}")
