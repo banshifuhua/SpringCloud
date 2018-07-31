@@ -1,6 +1,5 @@
 rootProject.name = 'SpringCloud'
 include('eamon-eureka')
-include('eamon-eureka-slaveone')
 include('eamon-house-service')
 include('eamon-house-consumer')
 
