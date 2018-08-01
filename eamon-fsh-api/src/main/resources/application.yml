@@ -9,7 +9,11 @@ zuul:
     #    cxytiandi是自定义名称，当访问/cxytiandi/**开始的地址时，就会跳到http://cxytiandi.com/上
     cxytiandi:
       path: /cxytiandi/**
+      #      转发
       url: http://cxytiandi.com/
+    #      将house-service 指定路由地址为api-house
+    house-service:
+      path: /api-house/**
 eureka:
   client:
     service-url:
