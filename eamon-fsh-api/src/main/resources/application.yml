@@ -17,7 +17,7 @@ zuul:
   #      过滤器禁用
   IpFilter:
     pre:
-      disable: true
+      disable: false
 eureka:
   client:
     service-url:

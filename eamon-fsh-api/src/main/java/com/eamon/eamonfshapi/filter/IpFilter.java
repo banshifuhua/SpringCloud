@@ -35,6 +35,7 @@ public class IpFilter extends ZuulFilter {
 
     @Override
     public Object run() {
+        System.out.println(20 / 0);
         RequestContext currentContext = RequestContext.getCurrentContext();
         currentContext.set("isSuccess", false);
         HttpServletRequest request = currentContext.getRequest();
