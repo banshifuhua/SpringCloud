@@ -1,4 +1,4 @@
-package com.eamon.eamonhystrixdashboart;
+package com.eamon.eamonhystrixdashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 
 @SpringBootApplication
 @EnableHystrixDashboard
-public class EamonHystrixDashboartApplication {
+public class EamonHystrixDashboardApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EamonHystrixDashboartApplication.class, args);
+        SpringApplication.run(EamonHystrixDashboardApplication.class, args);
     }
 }
