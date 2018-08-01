@@ -23,5 +23,5 @@ eureka:
     lease-expiration-duration-in-seconds: 5
 
 # 使用 log4j 作为日志输出
-logging:
-  config: classpath:log4j2.properties
+#logging:
+#  config: classpath:log4j2.properties
