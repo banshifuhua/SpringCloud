@@ -3,7 +3,9 @@ package com.eamon.eamonhouseconsumer.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.eamon.eamonhouseconsumer.common.CallHelloFallback;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,7 +15,8 @@ public class SubtitutionController {
     @Autowired
     RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "defaultCallHello")
+    @HystrixCommand(fallbackMethod = "defaultCallHello"
+            , commandProperties = {@HystrixProperty(name = "execution.isolation.strategy", value = "THREAD")})
     @GetMapping("/callHello")
     public String callHello() {
         String result = restTemplate.getForObject("http://house-service/house/hello", String.class);
