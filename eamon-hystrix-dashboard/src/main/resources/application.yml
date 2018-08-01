@@ -1,5 +1,19 @@
 spring:
   application:
-    name: eamon-hystrix-dashboard
+    name: hystrix-dashboard
 server:
   port: 9011
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/
+
+turbine:
+  #  需要聚合的服务名称
+  app-config: house-consumer,house-service
+  #  Trubine 需要聚合的集群名称
+  aggregator:
+    clusterConfig: default
+  #    集群名表达式
+  cluster-name-expression: new String("default")
