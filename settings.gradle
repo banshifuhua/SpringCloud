@@ -3,4 +3,5 @@ include('eamon-eureka')
 include('eamon-house-service')
 include('eamon-house-consumer')
 include('eamon-hystrix-dashboard')
+include('eamon-fsh-api')
 

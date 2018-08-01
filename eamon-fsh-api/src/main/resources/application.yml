@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: fsh-api
+server:
+  port: 2103
+zuul:
+  #  配置路由转发
+  routes:
+    #    cxytiandi是自定义名称，当访问/cxytiandi/**开始的地址时，就会跳到http://cxytiandi.com/上
+    cxytiandi:
+      path: /cxytiandi/**
+      url: http://cxytiandi.com/
