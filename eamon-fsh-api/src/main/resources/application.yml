@@ -10,3 +10,7 @@ zuul:
     cxytiandi:
       path: /cxytiandi/**
       url: http://cxytiandi.com/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/,http://eamon:eamon@127.0.0.1:8762/eureka/
