@@ -1,7 +1,6 @@
 package com.eamon.eamonfshapi.filter;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.eamon.eamonfshapi.base.ResponseCode;
 import com.eamon.eamonfshapi.base.ResponseData;
 import com.eamon.eamonfshapi.util.IpUtils;
@@ -29,12 +28,15 @@ public class IpFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        RequestContext ctx = RequestContext.getCurrentContext();
+        Object isSuccess = ctx.get("isSuccess");
+        return isSuccess == null ? true : Boolean.parseBoolean(isSuccess.toString());
     }
 
     @Override
     public Object run() {
         RequestContext currentContext = RequestContext.getCurrentContext();
+        currentContext.set("isSuccess", false);
         HttpServletRequest request = currentContext.getRequest();
         String ipAddr = IpUtils.getIpAddr(request);
         if (StringUtils.isNotBlank(ipAddr) && ipAddr.equals("")) {
