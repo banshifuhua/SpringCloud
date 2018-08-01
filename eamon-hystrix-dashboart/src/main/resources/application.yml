@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: eamon-hystrix-dashboard
+server:
+  port: 9011
