@@ -17,8 +17,21 @@ zuul:
   #      过滤器禁用
   IpFilter:
     pre:
-      disable: false
+      disable: true
+  #      开启重试
+  retryable: true
 eureka:
   client:
     service-url:
       defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/,http://eamon:eamon@127.0.0.1:8762/eureka/
+ribbon:
+  #  请求超时时间
+  connectTimeout: 500
+  #  请求处理的超时时间
+  readTimeout: 5000
+  #  对当前实例的重试次数
+  maxAutoRetries: 1
+  #  切换实例的最大重试次数
+  maxAutoRetriesNextServer: 3
+  #  对所有操作请求都进行重试
+  okToRetryOnAllOperations: true
