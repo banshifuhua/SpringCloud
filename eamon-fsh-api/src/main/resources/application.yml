@@ -14,6 +14,9 @@ zuul:
     #      将house-service 指定路由地址为api-house
     house-service:
       path: /api-house/**
+  IpFilter:
+    pre:
+      disable: false
 eureka:
   client:
     service-url:
