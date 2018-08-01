@@ -74,4 +74,4 @@ eureka:
 # 开启feign对hystrix的支持
 feign:
   hystrix:
-    enabled: true
+    enabled: false
