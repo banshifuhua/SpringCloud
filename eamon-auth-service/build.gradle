@@ -1,8 +1,16 @@
 dependencies {
+//    compile ('org.bouncycastle:bcprov-jdk15on: 1.59')
+//    compile ('org.bouncycastle:bcpkix-jdk15on: 1.59')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
+
+
+    compile('com.alibaba:druid-spring-boot-starter:1.1.2')
+    compile('mysql:mysql-connector-java')
+    compile('io.jsonwebtoken:jjwt-api:0.10.0')
+    runtime('io.jsonwebtoken:jjwt-jackson:0.10.0')
+    runtime('io.jsonwebtoken:jjwt-impl:0.10.0')
     runtime('org.springframework.boot:spring-boot-devtools')
-    runtime('mysql:mysql-connector-java')
 }

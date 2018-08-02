@@ -1,0 +1,59 @@
+server:
+  port: 2104
+spring:
+  application:
+    name: auth-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/spring_cloud
+    username: eamon
+    password: eamon
+    driver-class-name: com.mysql.jdbc.Driver
+    # 初始化连接数
+    initial-size: 10
+    # 最小连接数
+    min-idle: 5
+    # 最大连接数
+    max-active: 50
+    # 获取连接时最大的等待时间  单位毫秒
+    max-wait: 60000
+    # Destroy线程会检测连接的间隔时间
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 60000
+    # 检测连接是否有效的sql
+    validation-query: SELECT 1 FROM DUAL
+    # 检测连接是否有效
+    test-while-idle: true
+    # 申请连接时执行validationQuery检测连接是否有效
+    test-on-borrow: false
+    # 归还连接时执行validationQuery检测连接是否有效
+    test-on-return: false
+    # 定时输出统计日志的世界，毫秒
+    time-between-log-stats-millis: 300000
+    # 是否缓存preparedStatement，也就是PSCache
+    pool-prepared-statements: true
+    # Statement缓存大小
+    max-pool-prepared-statement-per-connection-size: 20
+    filter: stat,wall,log4j
+    # 连接属性
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=1000
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        #懒加载配置
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eamon:eamon@127.0.0.1:8761/eureka/,http://eamon:eamon@127.0.0.1:8762/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 5
